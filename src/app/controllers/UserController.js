@@ -55,12 +55,6 @@ class UserController {
       avatar,
     });
   }
-
-  async teste(req, res) {
-    return res.json({
-      res: 'GOOOOBARBER!',
-    });
-  }
 }
 
 export default new UserController();
