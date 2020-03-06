@@ -30,6 +30,7 @@ const bruteStore = new BruteRedis({
 
 const bruteForce = new Brute(bruteStore);
 
+routes.post('/', UserController.teste);
 routes.post('/users', validateUserStore, UserController.store);
 routes.post(
   '/sessions',
