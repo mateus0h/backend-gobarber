@@ -33,7 +33,7 @@ const bruteForce = new Brute(bruteStore);
 routes.post('/users', validateUserStore, UserController.store);
 routes.post(
   '/sessions',
-  // bruteForce.prevent,
+  bruteForce.prevent,
   validateSessionStore,
   SessionController.store
 );
