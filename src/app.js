@@ -32,7 +32,7 @@ class App {
     this.server.use(helmet());
     this.server.use(
       cors({
-        origin: process.env.LOCATION_FRONTEND,
+        origin: '',
       })
     );
     this.server.use(express.json());
