@@ -8,6 +8,7 @@ import Queue from '../../lib/Queue';
 
 class CancelAppointmentService {
   async run({ provider_id, user_id }) {
+
     const appointment = await Appointment.findByPk(provider_id, {
       include: [
         {
@@ -23,7 +24,7 @@ class CancelAppointmentService {
       ],
     });
 
-    if (appointment.user_id !== user_id) {
+    if (appointment.user_id != user_id) { 
       throw new Error("You don't have permission to cancel this appointment.");
     }
     const dateWithSub = subHours(appointment.date, 2);
