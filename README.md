@@ -1,1 +1,3 @@
-# backend-gobarber
+### Backend Gobarber
+
+api rest feita com NodeJs
